@@ -149,6 +149,7 @@ function retry(func, attempts) {
     for (let i = 0; i < attempts; ) {
       try {
         answ = func();
+        break;
       } catch (error) {
         i += 1;
       }
